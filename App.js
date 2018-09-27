@@ -1,20 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header } from './src/Components/Common';
 import firebase from 'firebase';
+import { Header } from './src/Components/Common';
+import { firebaseConfig } from './firebaseconfig';
 
 
 export default class App extends React.Component {
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: "AIzaSyDu67L-YOOs_kOjbZ_umnADDJIwE_xVKlI",
-      authDomain: "auth-grider-be884.firebaseapp.com",
-      databaseURL: "https://auth-grider-be884.firebaseio.com",
-      projectId: "auth-grider-be884",
-      storageBucket: "auth-grider-be884.appspot.com",
-      messagingSenderId: "414375333618"
-    })
-  }
+    console.log(firebaseConfig, 'firebaseonfig')
+    firebase.initializeApp(firebaseConfig)
+  };
+
   render() {
     return (
       <View>
