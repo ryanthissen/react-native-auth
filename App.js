@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './src/Components/Common';
 import { firebaseConfig } from './firebaseconfig';
+import LoginForm from './src/Components/LoginForm';
 
 
 export default class App extends React.Component {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Header headerText="Authentication" />
+        <LoginForm />
       </View>
     );
   }
